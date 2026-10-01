@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ILLITHID - Desarrollo de software, sitios web y e-commerce. Planes y oferta de lanzamiento.">
+<title>ILLITHID | Desarrollo de software</title>
+<link rel="icon" href="assets/logoillithid.png">
+<style>
+:root{--ink:#E5E1D7;--muted:#9a9484;--gold:#C49A45;--goldlight:#E5C477;--metal:#D8B66D;--champagne:#F3DDA6;--pale:#29251C;--line:#33301f66;--line2:#8C682B55;--card:#121313;--card2:#1C1B18;--green:#D8B66D;--shadow:0 18px 55px rgba(0,0,0,.55)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#080909 url('assets/fondoillithid.png') center/cover fixed no-repeat;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+header{background:rgba(8,9,9,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2);position:sticky;top:0;z-index:50}.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.16em;font-size:1.05rem;color:var(--champagne)}.brand small{display:block;font-size:.58rem;letter-spacing:.2em;color:var(--muted);font-weight:600}.logo{height:44px;width:44px;object-fit:cover;border-radius:50%;border:1px solid var(--line2)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.88rem}.navlinks a:hover{color:var(--goldlight)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#D8B66D,#C49A45);color:#080909;font-weight:750;cursor:pointer;box-shadow:0 8px 22px #C49A4555;transition:.25s}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px #C49A4577;filter:brightness(1.07)}.btn.outline{background:transparent;color:var(--goldlight);border:1px solid var(--gold);box-shadow:none}.btn.outline:hover{background:#C49A4518}
+.hero{background:#080909;border-bottom:1px solid var(--line2)}.hero-banner{display:block;width:100%;max-height:520px;object-fit:cover}.hero-body{padding:54px 0 66px;text-align:center}.eyebrow{display:inline-block;padding:7px 15px;border-radius:99px;border:1px solid var(--line2);background:#C49A4514;color:var(--goldlight);font-size:.75rem;font-weight:850;letter-spacing:.15em}.hero h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.02;letter-spacing:-.055em;margin:20px auto 16px;max-width:900px;color:#F3DDA6}.hero h1 span{background:linear-gradient(135deg,#F3DDA6,#C49A45);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:#c9c4b8;max-width:690px;margin:0 auto 27px;font-size:1.08rem}.hero-note{font-size:.82rem;color:var(--muted);margin-top:18px;letter-spacing:.12em}
+.section{padding:72px 0;background:rgba(8,9,9,.72)}.section.alt{background:rgba(18,19,19,.8)}.section-head{text-align:center;margin-bottom:34px}.section-head h2{font-size:clamp(1.8rem,4vw,2.65rem);letter-spacing:-.04em;margin:10px 0;color:var(--champagne)}.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(160deg,#1C1B18,#121313);border:1px solid var(--line2);border-radius:22px;padding:25px;box-shadow:var(--shadow);transition:.3s}.card:hover{border-color:#C49A4588;box-shadow:0 18px 55px rgba(196,154,69,.12)}.card h3{margin:8px 0;color:var(--champagne)}.card p{color:var(--muted);margin:0}.icon{width:44px;height:44px;border-radius:14px;background:#C49A4520;color:var(--goldlight);display:grid;place-items:center;font-size:1.25rem;font-weight:900;border:1px solid var(--line2)}
+.promo-banner{background:linear-gradient(120deg,#1C1B18,#29251C);border:1px solid var(--line2);color:var(--ink);border-radius:28px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:var(--shadow);margin-bottom:26px}.promo-banner strong{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.04em;display:block;line-height:1.1;color:var(--champagne)}.promo-banner span{color:var(--muted)}.price-layout{display:grid;grid-template-columns:310px 1fr;gap:22px;align-items:start}.selector{position:sticky;top:90px}.plan-list{display:grid;gap:9px;margin-top:18px}.plan-btn{width:100%;text-align:left;padding:14px 15px;border:1px solid var(--line2);border-radius:14px;background:#121313;cursor:pointer;color:var(--ink);font:inherit;display:flex;justify-content:space-between;align-items:center;transition:.25s}.plan-btn:hover{border-color:#C49A4566}.plan-btn.active{border-color:var(--gold);background:#C49A4515;box-shadow:0 5px 18px #C49A4522}.plan-btn b{font-size:.94rem}.plan-btn small{color:var(--muted)}.plan-detail{padding:30px}.plan-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:1px solid var(--line2);padding-bottom:20px}.plan-top h3{font-size:1.7rem;margin:0;letter-spacing:-.04em;color:var(--champagne)}.tag{font-size:.7rem;font-weight:850;letter-spacing:.1em;color:#080909;background:linear-gradient(135deg,#E5C477,#C49A45);border-radius:99px;padding:6px 10px}.price-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}.price-box{background:#1C1B18;border:1px solid var(--line2);border-radius:17px;padding:19px}.price-box.featured{background:#C49A4512;border-color:#C49A4577}.price-box label{font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}.price{font-size:1.8rem;font-weight:900;letter-spacing:-.045em;line-height:1.2;margin:8px 0 3px;color:var(--champagne)}.subprice{font-size:.85rem;color:var(--muted)}.saving{color:var(--metal);font-weight:800;font-size:.88rem;margin-top:9px}.detail-row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line2)}.detail-row:last-child{border:0}.detail-row span:first-child{color:var(--muted)}.note{font-size:.84rem;color:var(--muted);margin-top:18px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line2);border-radius:18px;background:#121313;box-shadow:var(--shadow)}table{border-collapse:collapse;width:100%;min-width:700px}th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:.9rem}th{background:#1C1B18;color:var(--goldlight);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}tr:last-child td{border-bottom:0}.check{color:var(--goldlight);font-weight:900}.dash{color:#5b584e}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:20px;border:1px solid var(--line2);border-radius:18px;background:linear-gradient(160deg,#1C1B18,#121313)}.step b{display:block;color:var(--goldlight);font-size:.8rem;letter-spacing:.1em}.step h3{font-size:1rem;margin:8px 0;color:var(--champagne)}.step p{font-size:.88rem;color:var(--muted);margin:0}
+.payment{display:grid;grid-template-columns:1fr 1.4fr;gap:24px;align-items:center}.payment-big{font-size:2rem;font-weight:900;line-height:1.1;letter-spacing:-.04em;color:var(--champagne)}.splits{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.split{padding:18px 10px;text-align:center;border-radius:16px;background:#C49A4512;border:1px solid var(--line2)}.split b{display:block;font-size:1.8rem;color:var(--goldlight)}.split span{font-size:.82rem;color:var(--muted)}.list{padding-left:20px;color:var(--muted)}.list li{margin:7px 0}
+.job img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px;border:1px solid var(--line2);margin-bottom:14px;transition:.3s}.job a:hover img{border-color:#C49A45aa}
+.contact{background:linear-gradient(120deg,#1C1B18,#29251C);border:1px solid var(--line2);color:var(--ink);border-radius:28px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:25px}.contact h2{color:var(--champagne)}.contact p{color:#c9c4b8;margin:8px 0 0}
+footer{padding:28px 0;color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:15px;background:#080909;border-top:1px solid var(--line2)}.muted{color:var(--muted)}.small{font-size:.8rem}.pill{display:inline-block;border-radius:99px;padding:5px 10px;background:#C49A4520;color:var(--goldlight);font-size:.72rem;font-weight:800;border:1px solid var(--line2)}
+@media(max-width:850px){.navlinks{display:none}.price-layout{grid-template-columns:1fr}.selector{position:static}.plan-list{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.payment{grid-template-columns:1fr}.contact{display:block}.contact .btn{margin-top:22px}}
+@media(max-width:560px){.hero{padding:70px 0}.section{padding:52px 0}.grid,.price-columns,.steps{grid-template-columns:1fr}.plan-list{grid-template-columns:1fr}.promo-banner{display:block}.promo-banner .btn{margin-top:18px}.plan-detail{padding:20px}.plan-top{display:block}.plan-top .tag{display:inline-block;margin-top:12px}.splits{gap:6px}.split{padding:13px 5px}.split b{font-size:1.45rem}.contact{padding:28px}footer{display:block}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+  <a class="brand" href="#"><img class="logo" src="assets/logoillithid.png" alt="ILLITHID logo"><span>ILLITHID<small>DESARROLLO DE SOFTWARE</small></span></a>
+  <nav class="navlinks"><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#planes">Planes</a><a href="#funciones">Funcionalidades</a><a href="#proceso">Proceso</a><a href="#contacto">Contacto</a></nav>
+  <a class="btn" href="#planes">Ver oferta</a>
+</div>
+</header>
+
+<main>
+<section class="hero">
+ <img class="hero-banner" src="assets/bannerillithid.png" alt="ILLITHID">
+ <div class="wrap hero-body">
+  <span class="eyebrow">OFERTA DE LANZAMIENTO · POR TIEMPO LIMITADO</span>
+  <h1>Tu negocio merece<br><span>una solución digital</span> a su medida.</h1>
+  <p>Diseñamos, desarrollamos e implementamos sitios web, aplicaciones y e-commerce para ayudarte a hacer crecer tu negocio.</p>
+  <a class="btn" href="#planes">Explorar planes y precios&nbsp; →</a>
+  <div class="hero-note">DISEÑO · DESARROLLO · IMPLEMENTACIÓN · SOPORTE</div>
+ </div>
+</section>
+
+<section class="section" id="servicios">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">QUÉ HACEMOS</span><h2>Soluciones digitales para tu negocio</h2><p>Creamos herramientas adaptadas a necesidades reales y objetivos concretos.</p></div>
+  <div class="grid">
+   <article class="card"><div class="icon">⌘</div><h3>Presencia digital</h3><p>Sitios web profesionales, responsive y adaptados a computadores y celulares.</p></article>
+   <article class="card"><div class="icon">▣</div><h3>Venta online</h3><p>E-commerce, catálogo de productos, carrito, pedidos y procesos de compra.</p></article>
+   <article class="card"><div class="icon">▤</div><h3>Gestión</h3><p>Usuarios, clientes, productos, inventario, pedidos y paneles administrativos.</p></article>
+   <article class="card"><div class="icon">↗</div><h3>Automatización</h3><p>Procesos digitales para reducir tareas manuales y mejorar la operación.</p></article>
+   <article class="card"><div class="icon">◇</div><h3>Sistemas personalizados</h3><p>Aplicaciones y plataformas diseñadas según los requerimientos del proyecto.</p></article>
+   <article class="card"><div class="icon">✓</div><h3>Acompañamiento</h3><p>Implementación, capacitación básica y soporte posterior al lanzamiento.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="trabajos">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">TRABAJOS REALIZADOS</span><h2>Proyectos creados por ILLITHID</h2><p>Haz clic en una imagen para visitar la página creada.</p></div>
+  <div class="grid" id="jobsGrid">
+
+   <article class="card job">
+    <a href="https://rypstore-8f9fb.web.app/" target="_blank" rel="noopener">
+     <img src="assets/jobs/fotorypstore.png" alt="Tienda RYPSTORE">
+    </a>
+    <h3>RYPSTORE</h3>
+    <p>Tienda e-commerce de venta de cartas TCG y coleccionables.</p>
+    <a class="btn outline" href="https://rypstore-8f9fb.web.app/" target="_blank" rel="noopener">Ver página ↗</a>
+   </article>
+
+   <!--
+   PLANTILLA NUEVO TRABAJO: copiar y pegar este bloque dentro de #jobsGrid.
+   Cambiar: foto (assets/jobs/NOMBRE_FOTO.png), título, descripción y URL.
+
+   <article class="card job">
+    <a href="https://tu-pagina.cl" target="_blank" rel="noopener">
+     <img src="assets/jobs/NOMBRE_FOTO.png" alt="Descripción del proyecto">
+    </a>
+    <h3>Nombre del proyecto</h3>
+    <p>Descripción breve del trabajo realizado.</p>
+    <a class="btn outline" href="https://tu-pagina.cl" target="_blank" rel="noopener">Ver página ↗</a>
+   </article>
+   -->
+
+  </div>
+ </div>
+</section>
+
+<section class="section alt" id="planes">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">02 · PLANES Y PRECIOS</span><h2>Elige el plan para tu proyecto</h2><p>Selecciona un nivel para ver inversión normal, precio promocional y mantención.</p></div>
+  <div class="promo-banner"><div><span>OFERTA TEMPORAL DE LANZAMIENTO</span><strong>Invierte en tu próxima<br>solución digital.</strong><span>Precios promocionales de desarrollo y mantención.</span></div><a class="btn outline" href="#contacto">Cotizar mi proyecto&nbsp; →</a></div>
+  <div class="price-layout">
+   <aside class="card selector">
+    <span class="pill">SELECCIONA UN NIVEL</span>
+    <div class="plan-list" id="planList">
+     <button class="plan-btn" data-plan="0"><b>1 · Básico</b><small>Página simple</small></button>
+     <button class="plan-btn" data-plan="1"><b>2 · Inicial</b><small>Página informativa</small></button>
+     <button class="plan-btn active" data-plan="2"><b>3 · Intermedio</b><small>App / e-commerce pequeño</small></button>
+     <button class="plan-btn" data-plan="3"><b>4 · Avanzado</b><small>E-commerce mediano</small></button>
+     <button class="plan-btn" data-plan="4"><b>5 · Escalable</b><small>Mayor escala</small></button>
+    </div>
+    <p class="note">Valores normales de referencia. El precio final se determina según requerimientos, funcionalidades y complejidad del proyecto.</p>
+   </aside>
+   <article class="card plan-detail" aria-live="polite">
+    <div class="plan-top"><div><span class="pill" id="planNumber">PLAN 3</span><h3 id="planName">Intermedio</h3><p class="muted" id="planSolution">App o E-commerce pequeño</p></div><span class="tag">OFERTA DE LANZAMIENTO</span></div>
+    <div class="price-columns">
+     <div class="price-box"><label>Precio normal · desarrollo</label><div class="price" id="devNormal">$500.000</div><div class="subprice" id="devNormalVat">$595.000 con IVA</div></div>
+     <div class="price-box featured"><label>Precio oferta · desarrollo</label><div class="price" id="devPromo">$450.000</div><div class="subprice" id="devPromoVat">$535.500 con IVA</div><div class="saving" id="devSaving">Ahorras $50.000 · $59.500 con IVA</div></div>
+    </div>
+    <div class="price-columns">
+     <div class="price-box"><label>Mantención normal / mes</label><div class="price" id="maintNormal">$140.000</div><div class="subprice" id="maintNormalVat">$166.000 con IVA</div></div>
+     <div class="price-box featured"><label>Mantención oferta / mes</label><div class="price" id="maintPromo">$110.000</div><div class="subprice" id="maintPromoVat">$130.900 con IVA</div><div class="saving" id="maintSaving">Ahorras $30.000 / mes</div></div>
+    </div>
+    <div class="detail-row"><span>Duración de tarifa promocional de mantención</span><b>Primeros 5 meses desde el lanzamiento</b></div>
+    <div class="detail-row"><span>Desde el mes 6</span><b>Tarifa normal de mantención</b></div>
+    <p class="note">La mantención incluye soporte técnico, corrección de errores, actualizaciones, monitoreo y mantenimiento general del sistema. Nuevas funcionalidades o modificaciones mayores se cotizan por separado.</p>
+   </article>
+  </div>
+  <p class="note">La promoción es temporal y puede finalizar o modificarse. Las condiciones aplicables serán las indicadas en la cotización o ficha de presupuesto aceptada por el cliente. Valores promocionales sujetos a evaluación del proyecto.</p>
+ </div>
+</section>
+
+<section class="section" id="funciones">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">03 · COMPARATIVA</span><h2>¿Qué incluye cada nivel?</h2><p>Comparación general de funcionalidades según el folleto de servicios.</p></div>
+  <div class="table-wrap"><table>
+   <thead><tr><th>Funcionalidad</th><th>Básico</th><th>Inicial</th><th>Intermedio</th><th>Avanzado</th><th>Escalable</th></tr></thead>
+   <tbody>
+    <tr><td>Página web</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>Diseño responsive</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>Formularios</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>Base de datos</td><td class="dash">—</td><td>Básica</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>Sistema de usuarios</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>Panel administrativo</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>E-commerce</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>Gestión de productos</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>Gestión de pedidos</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>Integraciones / APIs</td><td class="dash">—</td><td class="dash">—</td><td>Básicas</td><td class="check">✓</td><td class="check">✓</td></tr>
+    <tr><td>Escalabilidad</td><td class="dash">—</td><td class="dash">—</td><td>Básica</td><td class="check">✓</td><td class="check">✓</td></tr>
+   </tbody>
+  </table></div>
+  <p class="note">Las funcionalidades indicadas son referenciales. El alcance exacto se define en la ficha de presupuesto y propuesta de cada proyecto.</p>
+ </div>
+</section>
+
+<section class="section alt" id="incluye">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">01 · SOLUCIONES PARA TU NEGOCIO</span><h2>Un desarrollo de principio a fin</h2><p>El servicio contempla las etapas necesarias para implementar tu solución digital.</p></div>
+  <div class="grid">
+   <article class="card"><h3>¿Qué incluye nuestro desarrollo?</h3><ul class="list"><li>Análisis de requerimientos</li><li>Diseño de interfaz</li><li>Desarrollo Frontend y Backend</li><li>Base de datos</li><li>Adaptación para celulares y computadores</li></ul></article>
+   <article class="card"><h3>Calidad e implementación</h3><ul class="list"><li>Pruebas y corrección de errores</li><li>Implementación y puesta en producción</li><li>Capacitación básica</li><li>Soporte posterior al lanzamiento</li></ul></article>
+   <article class="card"><h3>Servicios que pueden cobrarse aparte</h3><ul class="list"><li>Dominio y servicios de terceros</li><li>Pasarelas de pago y licencias</li><li>Publicación en tiendas de aplicaciones</li><li>Servicios externos con cobro por consumo</li><li>Creación profesional de contenido/fotografía</li><li>Nuevas funcionalidades fuera del alcance acordado</li></ul></article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="proceso">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">04 · PROCESO Y CONDICIONES</span><h2>De la idea al lanzamiento</h2><p>Un proceso claro, con etapas definidas y acompañamiento.</p></div>
+  <div class="steps">
+   <article class="step"><b>01</b><h3>Reunión inicial</h3><p>Conocemos tu negocio y necesidades.</p></article>
+   <article class="step"><b>02</b><h3>Análisis y propuesta</h3><p>Definimos funcionalidades, alcance y presupuesto.</p></article>
+   <article class="step"><b>03</b><h3>Diseño</h3><p>Creamos la estructura y experiencia visual.</p></article>
+   <article class="step"><b>04</b><h3>Desarrollo</h3><p>Construimos y configuramos la solución.</p></article>
+   <article class="step"><b>05</b><h3>Pruebas</h3><p>Verificamos funcionamiento y corregimos errores.</p></article>
+   <article class="step"><b>06</b><h3>Lanzamiento</h3><p>Publicamos el sistema y dejamos todo operativo.</p></article>
+   <article class="step"><b>07</b><h3>Mantención</h3><p>Te acompañamos después del lanzamiento.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section alt">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">FORMA DE PAGO</span><h2>Pagos distribuidos durante el proyecto</h2><p>Para proyectos sobre $300.000 CLP, el pago se organiza por hitos.</p></div>
+  <div class="card payment">
+   <div><span class="pill">PLANIFICACIÓN ESTIMADA</span><div class="payment-big">2 a 3 meses</div><p class="muted">Pago distribuido durante el desarrollo, según el avance y calendario acordado.</p></div>
+   <div class="splits">
+    <div class="split"><b>40%</b><span>Al iniciar</span></div>
+    <div class="split"><b>30%</b><span>Durante el desarrollo</span></div>
+    <div class="split"><b>30%</b><span>Antes de la puesta en producción</span></div>
+   </div>
+  </div>
+  <p class="note">Proyectos hasta $300.000 CLP: 50% al iniciar y 50% al finalizar. Proyectos sobre $300.000 CLP: 40% al iniciar, 30% durante el desarrollo y 30% antes de la puesta en producción.</p>
+  <div class="card" style="margin-top:18px"><h3>Garantía de funcionamiento</h3><p class="muted">Los proyectos cuentan con un período de garantía posterior a la entrega para la corrección de errores relacionados directamente con el desarrollo contratado. La duración específica se establece en la ficha de presupuesto.</p></div>
+ </div>
+</section>
+
+<section class="section" id="contacto">
+ <div class="wrap">
+  <div class="contact"><div><span class="eyebrow">¿TIENES UN PROYECTO EN MENTE?</span><h2 style="font-size:2rem;margin:14px 0 0">Conversemos sobre tu idea.</h2><p>Solicita una evaluación y presupuesto personalizado.</p></div><a class="btn" href="https://wa.me/56930795255" target="_blank" rel="noopener">Hablar por WhatsApp&nbsp; ↗</a></div>
+  <div class="grid" style="margin-top:20px">
+   <article class="card"><span class="muted small">WHATSAPP</span><h3>+56 9 3079 5255</h3></article>
+   <article class="card"><span class="muted small">EMAIL</span><h3><a href="mailto:illithid.cl@gmail.com">illithid.cl@gmail.com</a></h3></article>
+   <article class="card"><span class="muted small">INSTAGRAM</span><h3><a href="https://instagram.com/illithiddev" target="_blank" rel="noopener">@illithiddev</a></h3></article>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap" style="display:flex;justify-content:space-between;gap:15px"><span><b style="color:#E5C477">ILLITHID</b> · Desarrollo de Software</span><span>Diseño · Desarrollo · Implementación · Soporte</span><span>© <span id="year"></span> ILLITHID</span></div></footer>
+
+<script>
+const plans=[
+ {name:"Básico",solution:"Página web simple",dn:"$200.000",dnv:"$238.000 con IVA",dp:"$180.000",dpv:"$214.200 con IVA",ds:"$20.000 · $23.800 con IVA",mn:"$80.000",mnv:"$95.200 con IVA",mp:"$60.000",mpv:"$71.400 con IVA",ms:"$20.000 · $23.800 con IVA"},
+ {name:"Inicial",solution:"Página web informativa",dn:"$300.000",dnv:"$357.000 con IVA",dp:"$270.000",dpv:"$321.300 con IVA",ds:"$30.000 · $35.700 con IVA",mn:"$100.000",mnv:"$119.000 con IVA",mp:"$75.000",mpv:"$89.000 con IVA",ms:"$25.000 · $30.000 con IVA"},
+ {name:"Intermedio",solution:"App o E-commerce pequeño",dn:"$500.000",dnv:"$595.000 con IVA",dp:"$450.000",dpv:"$535.500 con IVA",ds:"$50.000 · $59.500 con IVA",mn:"$140.000",mnv:"$166.000 con IVA",mp:"$110.000",mpv:"$130.900 con IVA",ms:"$30.000 · $35.100 con IVA"},
+ {name:"Avanzado",solution:"Aplicación / E-commerce mediano",dn:"$800.000",dnv:"$952.000 con IVA",dp:"$700.000",dpv:"$833.000 con IVA",ds:"$100.000 · $119.000 con IVA",mn:"$200.000",mnv:"$238.000 con IVA",mp:"$160.000",mpv:"$190.400 con IVA",ms:"$40.000 · $47.600 con IVA"},
+ {name:"Escalable",solution:"E-commerce / plataforma de mayor escala",dn:"Desde $1.200.000",dnv:"$1.420.000 con IVA aprox.",dp:"Desde $1.050.000",dpv:"$1.249.500 con IVA",ds:"Desde $150.000 · $170.500 con IVA",mn:"Desde $300.000",mnv:"$357.000 con IVA aprox.",mp:"Desde $250.000",mpv:"$297.500 con IVA",ms:"Desde $50.000 · $59.500 con IVA"}
+];
+const ids=["planNumber","planName","planSolution","devNormal","devNormalVat","devPromo","devPromoVat","devSaving","maintNormal","maintNormalVat","maintPromo","maintPromoVat","maintSaving"];
+function selectPlan(i){
+ const p=plans[i],vals=[`PLAN ${i+1}`,p.name,p.solution,p.dn,p.dnv,p.dp,p.dpv,`Ahorro: ${p.ds}`,p.mn,p.mnv,p.mp,p.mpv,`Ahorro mensual: ${p.ms}`];
+ ids.forEach((id,n)=>document.getElementById(id).textContent=vals[n]);
+ document.querySelectorAll(".plan-btn").forEach((b,n)=>{b.classList.toggle("active",n===i);b.setAttribute("aria-pressed",n===i?"true":"false")});
+}
+document.querySelectorAll(".plan-btn").forEach(b=>b.addEventListener("click",()=>selectPlan(Number(b.dataset.plan))));
+document.getElementById("year").textContent=new Date().getFullYear();
+selectPlan(2);
+</script>
+</body>
+</html>
