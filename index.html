@@ -19,7 +19,7 @@ header{background:rgba(8,9,9,.82);backdrop-filter:blur(10px);border-bottom:1px s
 .payment{display:grid;grid-template-columns:1fr 1.4fr;gap:24px;align-items:center}.payment-big{font-size:2rem;font-weight:900;line-height:1.1;letter-spacing:-.04em;color:var(--champagne)}.splits{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.split{padding:18px 10px;text-align:center;border-radius:16px;background:#C49A4512;border:1px solid var(--line2)}.split b{display:block;font-size:1.8rem;color:var(--goldlight)}.split span{font-size:.82rem;color:var(--muted)}.list{padding-left:20px;color:var(--muted)}.list li{margin:7px 0}
 .job img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px;border:1px solid var(--line2);margin-bottom:14px;transition:.3s}.job a:hover img{border-color:#C49A45aa}
 .contact{background:linear-gradient(120deg,#1C1B18,#29251C);border:1px solid var(--line2);color:var(--ink);border-radius:28px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:25px}.contact h2{color:var(--champagne)}.contact p{color:#c9c4b8;margin:8px 0 0}
-footer{padding:28px 0;color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:15px;background:#080909;border-top:1px solid var(--line2)}.muted{color:var(--muted)}.small{font-size:.8rem}.pill{display:inline-block;border-radius:99px;padding:5px 10px;background:#C49A4520;color:var(--goldlight);font-size:.72rem;font-weight:800;border:1px solid var(--line2)}
+footer{padding:28px 0;color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:15px;background:#080909;border-top:1px solid var(--line2)}.muted{color:var(--muted)}.small{font-size:.8rem}.pill{display:inline-block;border-radius:99px;padding:5px 10px;background:#C49A4520;color:var(--goldlight);font-size:.72rem;font-weight:800;border:1px solid var(--line2)}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chip-label{display:block;margin-top:16px;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}.chip-label+.chips{margin-top:8px}.pill.soft{background:transparent;color:var(--muted);border-color:var(--line2)}
 @media(max-width:850px){.navlinks{display:none}.price-layout{grid-template-columns:1fr}.selector{position:static}.plan-list{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.payment{grid-template-columns:1fr}.contact{display:block}.contact .btn{margin-top:22px}}
 @media(max-width:560px){.hero{padding:70px 0}.section{padding:52px 0}.grid,.price-columns,.steps{grid-template-columns:1fr}.plan-list{grid-template-columns:1fr}.promo-banner{display:block}.promo-banner .btn{margin-top:18px}.plan-detail{padding:20px}.plan-top{display:block}.plan-top .tag{display:inline-block;margin-top:12px}.splits{gap:6px}.split{padding:13px 5px}.split b{font-size:1.45rem}.contact{padding:28px}footer{display:block}}
 </style>
@@ -55,6 +55,38 @@ footer{padding:28px 0;color:var(--muted);font-size:.82rem;display:flex;justify-c
    <article class="card"><div class="icon">↗</div><h3>Automatización</h3><p>Procesos digitales para reducir tareas manuales y mejorar la operación.</p></article>
    <article class="card"><div class="icon">◇</div><h3>Sistemas personalizados</h3><p>Aplicaciones y plataformas diseñadas según los requerimientos del proyecto.</p></article>
    <article class="card"><div class="icon">✓</div><h3>Acompañamiento</h3><p>Implementación, capacitación básica y soporte posterior al lanzamiento.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section alt" id="tecnologias">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">STACK TECNOLÓGICO</span><h2>Tecnologías con las que trabajo</h2></div>
+  <div class="grid">
+   <article class="card">
+    <div class="icon">⌘</div>
+    <h3>Lenguajes</h3>
+    <span class="chip-label">Uso principal</span>
+    <div class="chips"><span class="pill">Java</span><span class="pill">JavaScript</span><span class="pill">TypeScript</span><span class="pill">HTML</span><span class="pill">CSS</span></div>
+    <span class="chip-label">También he trabajado</span>
+    <div class="chips"><span class="pill soft">Dart</span><span class="pill soft">Kotlin</span><span class="pill soft">SQL</span></div>
+   </article>
+   <article class="card">
+    <div class="icon">▣</div>
+    <h3>Frameworks y móvil</h3>
+    <span class="chip-label">Uso principal</span>
+    <div class="chips"><span class="pill">React</span><span class="pill">Angular</span><span class="pill">Ionic</span></div>
+    <span class="chip-label">También he trabajado</span>
+    <div class="chips"><span class="pill soft">Flutter</span><span class="pill soft">React Native</span><span class="pill soft">Node.js</span><span class="pill soft">Express</span><span class="pill soft">Django</span><span class="pill soft">FastAPI</span></div>
+   </article>
+   <article class="card">
+    <div class="icon">▤</div>
+    <h3>Datos y herramientas</h3>
+    <span class="chip-label">Uso principal</span>
+    <div class="chips"><span class="pill">Firebase</span><span class="pill">Android Studio</span></div>
+    <span class="chip-label">También he trabajado</span>
+    <div class="chips"><span class="pill soft">Firestore</span><span class="pill soft">MySQL</span><span class="pill soft">PostgreSQL</span><span class="pill soft">Git</span></div>
+   </article>
   </div>
  </div>
 </section>
@@ -114,6 +146,22 @@ footer{padding:28px 0;color:var(--muted);font-size:.82rem;display:flex;justify-c
    </article>
    -->
 
+  </div>
+ </div>
+</section>
+
+<section class="section" id="aplicaciones">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">APLICACIONES</span><h2>Aplicaciones para Android</h2><p>Apps móviles desarrolladas con Flutter, React Native y Kotlin.</p></div>
+  <div class="contact">
+   <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <div class="icon" style="flex:0 0 auto">▶</div>
+    <div>
+     <h2 style="font-size:1.7rem;margin:0">Perfil de desarrollador en Google Play</h2>
+     <p>Todas mis aplicaciones reunidas en un solo lugar.</p>
+    </div>
+   </div>
+   <a class="btn" href="https://play.google.com/store/apps/developer?id=Worrx" target="_blank" rel="noopener">Ver en Google Play&nbsp; ↗</a>
   </div>
  </div>
 </section>
